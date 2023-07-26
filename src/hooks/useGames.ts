@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import api from "../services/api";
 import { CanceledError } from "axios";
 
-interface Game {
+export interface Game {
+  background_image: string;
   id: number;
   name: string;
 }
