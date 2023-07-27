@@ -14,10 +14,10 @@ import useGenres, { Genre } from "../hooks/useGenres";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
-  selectedGenre: Genre | null;
+  selectedGenreId?: number;
 }
 
-const GenreList: React.FC<Props> = ({ onSelectGenre, selectedGenre }) => {
+const GenreList: React.FC<Props> = ({ onSelectGenre, selectedGenreId }) => {
   const { data, isLoading, error } = useGenres();
 
   if (isLoading) return <Spinner />;
@@ -41,7 +41,7 @@ const GenreList: React.FC<Props> = ({ onSelectGenre, selectedGenre }) => {
               <Button
                 textAlign="left"
                 whiteSpace="normal"
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenreId ? "bold" : "normal"}
                 fontSize="lg"
                 variant="link"
                 onClick={() => onSelectGenre(genre)}>
