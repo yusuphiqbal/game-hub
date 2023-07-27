@@ -1,14 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { GameQuery } from "../App";
+import { Platform } from "./usePlatforms";
 import { FetchResponse } from "../services/api";
 import api from "../services/api";
-
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
 
 export interface Game {
   background_image: string;
