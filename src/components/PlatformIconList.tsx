@@ -10,10 +10,10 @@ import {
 import { BsNintendoSwitch } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 import { HStack, Icon } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 import React from "react";
 
-import { Platform } from "../entities/Platform";
-import { IconType } from "react-icons";
+import Platform from "../entities/Platform";
 
 interface Props {
   platforms: Platform[];
